@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem example</title>
+</head>
+<body>
+
+
+<br/>
+
+<p> expected result</p>
+<p>{</p>
+<p> id: type = int,</p>
+<p> jobname: type = string,</p>
+<p> date: type = date,</p>
+<p> workhours: type = int,</p>
+<p> pay: type = int,</p>
+<p> infoworkeronly: type = string</p>
+<p>}</p>
+
+<br/>
+<button type="button" id="dataGetButton">
+    get data
+</button>
+<br/>
+Results:
+
+<div id="data">
+
+</div>
+
+
+</button>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+<script>
+  $(function () {
+    $('#dataGetButton').on('click', getData)
+  })
+
+  function getData () {
+    $.get('http://localhost:3000/jobs/1', function (result) {
+      console.log("Got this from the server: ", result)
+      let resultHtml = `
+                        <p>{</p>
+                        <p> id: ${result.id}</p>
+                        <p> jobname: ${result.jobname},</p>
+                        <p> date: ${result.date},</p>
+                        <p> workhours: ${result.workhours},</p>
+                        <p> pay: ${result.pay},</p>
+                        <p> infoworkeronly: ${result.infoWorkerOnly} </p>
+                        <p>}</p>`
+
+      $('#data').html(resultHtml)
+    })
+  }
+
+  function postJob () {
+
+  }
+
+  console.log("string 11 +", 1, " = ", "11"+1)
+  console.log("integer",11, "+", 1, " = ", 11+1)
+</script>
+
+</body>
+</html>

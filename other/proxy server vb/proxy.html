@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proxy</title>
+</head>
+<body>
+
+
+
+<button type="button" id="dataGetButton">
+    get data
+</button>
+
+Results:
+
+<div id="data">
+
+</div>
+
+
+</button>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+      $("#dataGetButton").on("click", getData);
+    })
+
+    function getData(){
+      $.get("http://localhost:3000/jobs/4",  function (result) {
+        let resultHtml = `<br> <p> ${result.jobname}</p><p>${result.date}</p>`;
+        $('#data').html(resultHtml)
+      })
+    }
+</script>
+
+</body>
+</html>

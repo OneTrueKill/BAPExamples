@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "jobname": "cook",
+    "date": "18-12-2018",
+    "workhours": 8,
+    "moneyWhenCompleted ": 11,
+    "infoWorkerOnly": "Bring your own hat"
+  },
+  {
+    "id": 1,
+    "jobname": "bartender",
+    "date": "18-12-2018",
+    "workhours": 10,
+    "moneyWhenCompleted ": 8,
+    "infoWorkerOnly": "Always say hello"
+  }
+]

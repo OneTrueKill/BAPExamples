@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Falcor client</title>
+</head>
+<body>
+Check the console!
+
+<script src="https://netflix.github.io/falcor/build/falcor.browser.js"></script>
+<script>
+    const model = new falcor.Model({
+      source: new falcor.HttpDataSource('/model.json')
+    });
+
+    /**
+    model.get("categories[0..1].jobs[0]['jobName', 'dd']").then( (value)=>{
+      console.log(JSON.stringify(value))
+    })**/
+
+    model.getValue("categories[0].jobs[0].jobName").then(function (res) {
+      console.log(res)
+    })
+
+    model.setValue("categories[0].jobs[0].jobName", 'NewName').then(function(){
+      console.log("done")
+    })
+
+
+</script>
+
+</body>
+</html>

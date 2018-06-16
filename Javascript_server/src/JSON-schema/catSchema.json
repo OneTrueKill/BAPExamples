@@ -1,0 +1,18 @@
+{
+  "id": "category",
+  "title": "Category",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "catName", "catDescription"],
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "catName": {
+      "type": "string"
+    },
+    "catDescription": {
+      "type": "string"
+    }
+  }
+}

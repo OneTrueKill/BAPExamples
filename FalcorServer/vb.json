@@ -1,0 +1,36 @@
+const model = new falcor.Model({
+cache: {
+jobs: {
+1: {
+jobName: 'cook',
+date: '2018-05-09',
+workhours: 8,
+pay: 11,
+infoWorkerOnly: 'Bring your own hat!'
+},
+2: {
+jobName: 'bartender',
+date: '2018-05-09',
+workhours: 10,
+pay: 8,
+infoWorkerOnly: 'Always say hello!'
+}
+},
+categories: {
+1: {
+catName: 'hard',
+catDescription: 'This is a difficult job'
+}
+
+},
+categoryList: [
+{
+category: $ref('categories[1]'),
+catJobs: [
+$ref('jobs[1]')
+]
+}
+]
+
+}
+})

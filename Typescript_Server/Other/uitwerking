@@ -1,0 +1,16 @@
+1. npm init
+
+2. install typescript npm install typescript
+
+3. tsconfig.json config file => moet deze naam zijn
+
+4. source directory en tsc-compiled directory en deze toevoegen in tscConfig
+
+5. intall npm types (dev dependencies want is gewoon nodig voor te ontwikkelen)
+
+5. instalatie en typeinstalatie
+    -express en express types
+    -body-parser en body-parser types
+
+
+
